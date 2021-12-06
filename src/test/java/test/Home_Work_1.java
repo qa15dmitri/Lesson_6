@@ -9,7 +9,5 @@ public class Home_Work_1 {
     public void home_work_test1(){
 
     }
-    public void home_work_test2(){
-// jhfljg;lkh;k
-    }
+
 }
