@@ -1,7 +1,6 @@
 package test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,12 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Home_Work_1_3_less6 {
 
-  //  public void cssSelector() {
-  //      By isSelector = By.cssSelector(".radio");
-
-   // }
-
-    @Test
+      @Test
     public void test1() throws InterruptedException {
         // инициализация chrome driver и запуск приложения
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -39,12 +33,9 @@ public class Home_Work_1_3_less6 {
         String metod = "2";
         String direct = "1";
 
-
         // ожидаемые результаты
         String expectedResult1 = "53";
         String expectedResult2 = "7";
-
-
 
         // ввод данных в поля ввода
         WebElement lnRoomIntput = driver.findElement(By.id("ln_room_id"));
@@ -75,36 +66,27 @@ public class Home_Work_1_3_less6 {
         indentWallsIntput.clear();
         indentWallsIntput.sendKeys(indentWalls);
 
-
-        // ввод всплывающих окон
+        // ввод dropdown окон
         WebElement layingMethodLaminateInput = driver.findElement(By.id("laying_method_laminate"));
         Select layingMethodLaminateInputInputDropDown = new Select(layingMethodLaminateInput);
         layingMethodLaminateInputInputDropDown.selectByValue(metod);
 
         // радио
-       WebElement radio = driver.findElement(By.id("direction-laminate-id1"));
-       radio.click();
+        WebElement radio = driver.findElement(By.id("direction-laminate-id1"));
+        radio.click();
 
         // расчет
-       WebElement selectBotton = driver.findElement(By.cssSelector(".calc-btn-div .calc-btn"));
-       selectBotton.click();
+        WebElement selectBotton = driver.findElement(By.cssSelector(".calc-btn-div .calc-btn"));
+        selectBotton.click();
 
 // получение данных и обработка
- //       String result1 = driver.findElement(By.cssSelector("padding:5px 0;font-size:18px; color:#0E8C19; font-weight:bold;");
-//        String result2 = driver.findElement(By.cssSelector("padding:5px 0;font-size:18px; color:#0E8C19; font-weight:bold;")).getText();
+        String result1 = driver.findElement(By.cssSelector("span[style='padding:5px 0;font-size:22px; color:#C80303; font-weight:bold;']")).getText();
+        String result2 = driver.findElement(By.cssSelector("span[style='padding:5px 0;font-size:18px; color:#0E8C19; font-weight:bold;']")).getText();
 
         // анадиз результатов
- //           Assert.assertEquals(result1, expectedResult1, "Площадь укладки - различные");
- //           Assert.assertEquals(result2, expectedResult2, "Кол-во панелей - различные");
+        Assert.assertEquals(result1, expectedResult1, "Площадь укладки - различные");
+        Assert.assertEquals(result2, expectedResult2, "Кол-во панелей - различные");
 
-
-
-        // печать
-      //  System.out.println(result1);
-     //   System.out.println(result2);
-
-
-        Thread.sleep(10000);
         driver.quit();
     }
 }
