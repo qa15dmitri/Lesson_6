@@ -17,7 +17,7 @@ public class CssSelector {
         By tagAtributeSelector = By.cssSelector("label[for='name']"); // поиск по tag и атрибуту со значением
         By tagAtributeSelector1 = By.cssSelector("label[for]"); // поиск по tag и атрибуту
 
-        By multipleClassSelector = By.cssSelector(".column.overflow-content"); // поиск по двум классамв элементе
+        By multipleClassSelector = By.cssSelector(".column.overflow-content"); // поиск по двум классам в элементе
 
         By simpleHierarchicalClassSelector = By.cssSelector(".table .content-inner"); // поиск простого дочернего элемента
 
@@ -49,10 +49,6 @@ public class CssSelector {
 
         By elementNFromLastChildSelector = By.cssSelector("li:nth-last-child(3)"); // поиск элемента N-ого дочернего элемента с конца
 
-
-
-
-
-
     }
+
 }

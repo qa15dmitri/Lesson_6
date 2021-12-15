@@ -42,8 +42,7 @@ public class Home_Work_1_2_less_6 {
 
         // ввод данных в поля ввода
         WebElement roomWidthIntput = driver.findElement(By.name("calc_roomwidth"));
-        roomWidthIntput.sendKeys(Keys.DELETE);
-        roomWidthIntput.sendKeys(Keys.DELETE);
+        roomWidthIntput.sendKeys(Keys.CONTROL + "a");
         roomWidthIntput.sendKeys(roomWidth);
 
         WebElement roomHeightIntput = driver.findElement(By.name("calc_roomheight"));
